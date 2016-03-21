@@ -16,8 +16,10 @@ namespace TetsInheritanceChallenge
         public string Model { get; set; }
         public int NumOfGears { get; set; } = 4;
         public int NumOfTires { get; set; } = 4;
-        
-       
+        public override string ToString()
+        {
+            return $"This is a {Make} {Model}"; 
+        }
     }
 
 
@@ -33,7 +35,7 @@ namespace TetsInheritanceChallenge
         {
             Assert.IsTrue(typeof(ElectricCar).IsSubclassOf(typeof(Vehicle)));
             Assert.IsTrue(typeof(Motorcycle).IsSubclassOf(typeof(Vehicle)));
-            Console.WriteLine($"This is a {make} {model}");
+            
         }
 
         [TestMethod]
